@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder --publish=never"
+    "dist": "electron-builder -p always"
   },
   "dependencies": {
     "electron-is-dev": "^2.0.0",
@@ -26,6 +26,7 @@
       "provider": "github",
       "owner": "mmmyjun",
       "repo": "testElectron1",
+      "token": "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",
       "releaseType": "release"
     }
   ],
