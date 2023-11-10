@@ -4,14 +4,14 @@
   "description": "My Electron application description3",
   "keywords": [],
   "main": "./main.js",
-  "version": "1.1.10",
+  "version": "1.1.11",
   "author": "mss",
   "copyright": "Copyright (c) @ 2014-2015 mss",
   "license": "MIT",
   "scripts": {
     "dev": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder --win --x64"
+    "dist": "electron-builder --publish=never"
   },
   "dependencies": {
     "electron-is-dev": "^2.0.0",
