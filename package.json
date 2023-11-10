@@ -35,13 +35,11 @@
       "target": [
         "nsis"
       ],
-      "publish": [
-        {
-          "provider": "github",
-          "owner": "mmmyjun",
-          "repo": "testElectron1"
-        }
-      ]
+      "publish": {
+        "provider": "github",
+        "owner": "mmmyjun",
+        "repo": "testElectron1"
+      }
     },
     "nsis": {
       "include": "build/installer.nsh",
