@@ -57,38 +57,6 @@
       "deleteAppDataOnUninstall": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true
-    },
-
-
-    "mac": {
-      "category": "public.app-category.productivity",
-      "artifactName": "${productName}-${version}-${arch}.${ext}",
-      "target": [
-        "dmg",
-        "zip"
-      ]
-    },
-    "dmg": {
-      "background": "assets/appdmg.png",
-      "icon": "assets/icon.icns",
-      "iconSize": 100,
-      "contents": [
-        {
-          "x": 380,
-          "y": 280,
-          "type": "link",
-          "path": "/Applications"
-        },
-        {
-          "x": 110,
-          "y": 280,
-          "type": "file"
-        }
-      ],
-      "window": {
-        "width": 500,
-        "height": 500
-      }
     }
   }
 }
