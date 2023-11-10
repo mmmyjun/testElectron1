@@ -1,6 +1,6 @@
 {
   "name": "y1",
-  "productName": "y22",
+  "productName": "y22~",
   "description": "My Electron application description3",
   "keywords": [],
   "main": "./main.js",
@@ -26,7 +26,7 @@
       "provider": "github",
       "owner": "mmmyjun",
       "repo": "testElectron1",
-      "token": "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",
+      "token": "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",
       "releaseType": "release"
     }
   ],
