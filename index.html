@@ -19,7 +19,6 @@
         ipcRender.send('checkAppVersion');
         // 接收主进程发来的通知，检测当前应用版本
         ipcRender.receive("version", (version) => {
-          console.log(version, "check current version......")
           document.querySelector('.current-app-version').innerHTML = `current app version: ${version}`;
         });
         
