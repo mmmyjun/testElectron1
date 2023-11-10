@@ -4,7 +4,7 @@
   "description": "My Electron application description3",
   "keywords": [],
   "main": "./main.js",
-  "version": "1.1.11",
+  "version": "1.1.12",
   "author": "mss",
   "copyright": "Copyright (c) @ 2014-2015 mss",
   "license": "MIT",
@@ -25,14 +25,14 @@
     {
       "provider": "github",
       "owner": "mmmyjun",
-      "repo": "testElectron1"
+      "repo": "testElectron1",
+      "releaseType": "release"
     }
   ],
   "build": {
     "appId": "com.electron.y111",
     "win": {
       "icon": "build/256.png",
-      "artifactName": "${productName}-${platform}-${arch}-${version}.${ext}",
       "target": [
         "nsis"
       ]
