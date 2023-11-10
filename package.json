@@ -11,7 +11,7 @@
   "scripts": {
     "dev": "electron .",
     "pack": "electron-builder --dir",
-    "dist": "electron-builder --publish=never -p always"
+    "dist": "electron-builder --win --x64"
   },
   "dependencies": {
     "electron-is-dev": "^2.0.0",
@@ -34,18 +34,7 @@
       "icon": "build/256.png",
       "artifactName": "${productName}-${platform}-${arch}-${version}.${ext}",
       "target": [
-        {
-          "target": "nsis",
-          "arch": [
-            "ia32"
-          ]
-        },
-        {
-          "target": "zip",
-          "arch": [
-            "ia32"
-          ]
-        }
+        "nsis"
       ]
     },
     "nsis": {
