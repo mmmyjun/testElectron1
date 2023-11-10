@@ -25,9 +25,7 @@
     {
       "provider": "github",
       "owner": "mmmyjun",
-      "repo": "testElectron1",
-      "token": "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",
-      "releaseType": "release"
+      "repo": "testElectron1"
     }
   ],
   "build": {
