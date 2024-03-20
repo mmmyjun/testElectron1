@@ -80,12 +80,12 @@ autoUpdater.on('checking-for-update', () => {
   sendUpdateMessage(message.checking);
 });
 // 检测到可以更新时
-autoUpdater.on('update-available', () => {
+autoUpdater.on('update-available', (e) => {
   // 这里我们可以做一个提示，让用户自己选择是否进行更新
   dialog.showMessageBox({
       type: 'info',
       title: '应用有新的更新',
-      message: '发现新版本，是否现在更新？',
+      message: '发现新版本: ' + e.version + '，是否现在更新？',
       buttons: ['是', '否']
   }).then(({ response }) => {
       if (response === 0) {

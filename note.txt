@@ -45,3 +45,9 @@
 2、几乎支持了所有平台的所有格式；
 3、支持Auto Update；
 4、支持CLI和JS API两种使用方式；
+
+
+githubaction:
+https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions
+https://docs.github.com/zh/actions/security-guides/automatic-token-authentication
+https://docs.github.com/en/actions/learn-github-actions/contexts#secrets-context
