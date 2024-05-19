@@ -9,7 +9,7 @@
   <body>
     <div>
         <p class="current-app-version"></p>
-        <p class="text-name">{text}</p>
+        <p class="text-name"></p>
         <p class="pro-percent"></p>
     </div>
 
@@ -26,7 +26,8 @@
         ipcRender.send('checkForUpdate');
         // 接收主进程发来的通知，告诉用户当前应用是否需要更新
         ipcRender.receive('message', data => {
-            document.querySelector('.text-name').innerHTML = text;
+            console.log('receive message:', data);
+            document.querySelector('.text-name').innerHTML = data;
         });
         // 如果当前应用有新版本需要下载，则监听主进程发来的下载进度
         ipcRender.receive('downloadProgress', data => {
@@ -46,6 +47,9 @@
     数量: <input type="text" id="num" value="1">
     <button onclick="add1()">add 1</button>
     <button onclick="minus1()">minus 1</button>
+    
+    <hr>
+    <p id="output">Click it to see the effect in this interface.</p>
     <script>
       function add1() {
         document.querySelector('#num').value = parseInt(document.querySelector('#num').value) + 1;

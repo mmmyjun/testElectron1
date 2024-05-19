@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, dialog, BrowserView } = require('electron')
+const { app, BrowserWindow, ipcMain, dialog, BrowserView, Notification } = require('electron')
 const path = require('path')
 const isDev = require('electron-is-dev');
 const { autoUpdater } = require('electron-updater');
@@ -8,7 +8,6 @@ Object.defineProperty(app, 'isPackaged', {
     return true;
   }
 });
-
 
 async function handleFileOpen () {
   const { canceled, filePaths } = await dialog.showOpenDialog()
@@ -35,6 +34,12 @@ function createWindow () {
   // view.webContents.loadURL('https://electronjs.org')
 }
 
+const NOTIFICATION_TITLE = 'Basic Notification'
+const NOTIFICATION_BODY = 'Notification from the Main process'
+function showNotification () {
+  console.log('showNotification ing。。。')
+  new Notification({ title: NOTIFICATION_TITLE, body: NOTIFICATION_BODY }).show()
+}
 app.whenReady().then(() => {
   ipcMain.handle('dialog:openFile', handleFileOpen)
   createWindow()
@@ -42,6 +47,7 @@ app.whenReady().then(() => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
 })
+// .then(showNotification)
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit()
